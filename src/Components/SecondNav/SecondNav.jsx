@@ -41,8 +41,8 @@ const SecondNav = () => {
                     </ul>
                 </div>
                 <div className="md:pr-20 flex gap-4">
-                    <NavLink><RiShoppingCartLine className='p-2 bg-white text-4xl border border-black rounded-full'></RiShoppingCartLine></NavLink>
-                    <NavLink><MdOutlineFavoriteBorder className='p-2 bg-white text-4xl border border-black rounded-full'></MdOutlineFavoriteBorder></NavLink>
+                    <NavLink><RiShoppingCartLine className='p-2 bg-white text-4xl border-2 rounded-full'></RiShoppingCartLine></NavLink>
+                    <NavLink><MdOutlineFavoriteBorder className='p-2 text-red-600 bg-white text-4xl border-2 rounded-full'></MdOutlineFavoriteBorder></NavLink>
                 </div>
             </div>
         </div>

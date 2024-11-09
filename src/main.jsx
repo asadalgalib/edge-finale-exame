@@ -6,6 +6,7 @@ import Mainlayout from './Components/Mainlayout/Mainlayout.jsx';
 import Bannerlayout from './Components/Bannerlayout/Bannerlayout.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Statictis from './Components/Statictis/Statictis.jsx';
+import Details from './Components/Details/Details.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: 'product/:id',
+        loader :({params})=> fetch('../public/data.json'),
+        element:<Details></Details>,
       }
     ]
   },

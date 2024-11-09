@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Navbar from '../Navbar/Navbar';
 import ShowProducts from '../ShowProducts/ShowProducts';
+import Navbar from '../Navbar/Navbar';
 
 const Bannerlayout = () => {
     return (
