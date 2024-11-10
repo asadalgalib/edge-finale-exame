@@ -2,7 +2,7 @@
 
 ### Live Link
 
-Live Link : https://asad09.ph-assignment-eight.surge.sh/
+Live Link : asad09.ph-assignment-eight.surge.sh
 
 ### Requirement Document Link
 
