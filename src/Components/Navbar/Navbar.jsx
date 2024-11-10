@@ -1,13 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiShoppingCartLine } from "react-icons/ri";
+import './Navbar.css'
 
 const Navbar = () => {
+    const location = useLocation();
+    console.log(location)
     return (
-
-        <div className='mt-4 mx-4 pt-2 px-2 border-x border-t rounded-t-2xl'>
-            <div className="flex items-center justify-between bg-[#9538E2] rounded-t-xl p-4">
+        <div className={`${location.pathname === '/' ? 'mt-2 mx-4 pt-2 px-2 border-x border-t rounded-t-2xl' : ''}`}>
+            <div className={`flex items-center justify-between p-4 ${location.pathname === '/' ? 'bg-[#9538E2] rounded-t-xl' : 'bg-white' }`}>
                 <div className="md:pl-20">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,18 +34,18 @@ const Navbar = () => {
                             <li className='mx-4 text-black '><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
                         </ul>
                     </div>
-                    <a className="text-2xl text-white font-semibold">Gadget Heaven</a>
+                    <a className={`text-2xl font-semibold ${location.pathname === '/' ? 'text-white' : 'text-black' }`}>Gadget Heaven</a>
                 </div>
                 <div className="hidden lg:flex">
-                    <ul className="lg:flex">
-                        <li className='mx-4 text-white '><NavLink to={'/'}>Home</NavLink></li>
-                        <li className='mx-4 text-white '><NavLink to={'/statictis'}>Statistics</NavLink></li>
-                        <li className='mx-4 text-white'><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+                    <ul className={`lg:flex text-white`}>
+                        <li className={`mx-4 ${location.pathname === '/' ? 'text-white' : 'text-black'}`}><NavLink to={'/'}>Home</NavLink></li>
+                        <li className={`mx-4 ${location.pathname === '/' ? 'text-white' : 'text-black'}`}><NavLink to={'/statictis'}>Statistics</NavLink></li>
+                        <li className={`mx-4 ${location.pathname === '/' ? 'text-white' : 'text-black'}`}><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
                     </ul>
                 </div>
                 <div className="md:pr-20 flex gap-4">
-                    <NavLink><RiShoppingCartLine className='p-2 bg-white text-4xl rounded-full'></RiShoppingCartLine></NavLink>
-                    <NavLink><MdOutlineFavoriteBorder className='p-2 bg-white text-red-600 text-4xl rounded-full'></MdOutlineFavoriteBorder></NavLink>
+                    <NavLink><RiShoppingCartLine className='p-2 border bg-white text-4xl rounded-full'></RiShoppingCartLine></NavLink>
+                    <NavLink><MdOutlineFavoriteBorder className='p-2 border bg-white text-red-600 text-4xl rounded-full'></MdOutlineFavoriteBorder></NavLink>
                 </div>
             </div>
         </div>

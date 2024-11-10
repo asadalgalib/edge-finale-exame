@@ -4,8 +4,6 @@ import { FaStarHalf } from "react-icons/fa";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useLoaderData, useParams } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
-import SecondNav from '../SecondNav/SecondNav';
 
 const Details = () => {
 
@@ -20,7 +18,7 @@ const Details = () => {
 
     return (
         <div className=''>
-            <SecondNav></SecondNav>
+           
             <div className=''>
                 <div className='bg-[#9538E2] flex flex-col justify-center items-center pt-4 md:pt-8 pb-32 md:pb-56'>
                     <h1 className='text-white font-bold  text-center text-2xl md:text-3xl  md:max-w-5xl mx-auto'>Product Details</h1>

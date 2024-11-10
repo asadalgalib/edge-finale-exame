@@ -6,7 +6,6 @@ import Navbar from '../Navbar/Navbar';
 const Bannerlayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <Banner></Banner>
             <ShowProducts></ShowProducts>
         </div>
