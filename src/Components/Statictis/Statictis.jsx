@@ -1,11 +1,12 @@
 import React from 'react';
 import SecondNav from '../SecondNav/SecondNav';
+import Errorpage from '../Errorpage/Errorpage';
 
 const Statictis = () => {
     return (
         <section>
             <div>
-                <h1>This is Statictis</h1>
+                <Errorpage></Errorpage>
             </div>
         </section>
     );

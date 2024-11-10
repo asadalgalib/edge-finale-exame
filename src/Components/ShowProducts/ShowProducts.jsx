@@ -51,7 +51,7 @@ const ShowProducts = () => {
                 <div className='bg-slate-100 max-h-[380px] grid grid-cols-1 gap-2 items-center p-2 rounded-xl border-white justify-start'>
                     <button onClick={handleAllProduct} className={`py-2 px-8 border rounded-full font-semibold ${isActive ? 'bg-white' : 'bg-[#9538E2] text-white'}`}>All Products</button>
                     {
-                        gotCategory.map(data =>  <button onClick={() => { handleCategoryBtn(data.category); handleCategoryStyle(data.id) }} className={`py-2 px-8 border rounded-full font-semibold ${btnActive === data.id ? 'bg-[#9538E2] text-white' : 'bg-white '}`}>{data.category}</button>)
+                        gotCategory.map(data =>  <button key={data.id} onClick={() => { handleCategoryBtn(data.category); handleCategoryStyle(data.id) }} className={`py-2 px-8 border rounded-full font-semibold ${btnActive === data.id ? 'bg-[#9538E2] text-white' : 'bg-white '}`}>{data.category}</button>)
                     }
                 </div>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>

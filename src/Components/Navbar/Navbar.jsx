@@ -6,7 +6,7 @@ import './Navbar.css'
 
 const Navbar = () => {
     const location = useLocation();
-    console.log(location)
+    
     return (
         <div className={`${location.pathname === '/' ? 'mt-2 mx-4 pt-2 px-2 border-x border-t rounded-t-2xl' : ''}`}>
             <div className={`flex items-center justify-between p-4 ${location.pathname === '/' ? 'bg-[#9538E2] rounded-t-xl' : 'bg-white' }`}>
@@ -44,8 +44,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="md:pr-20 flex gap-4">
-                    <NavLink><RiShoppingCartLine className='p-2 border bg-white text-4xl rounded-full'></RiShoppingCartLine></NavLink>
-                    <NavLink><MdOutlineFavoriteBorder className='p-2 border bg-white text-red-600 text-4xl rounded-full'></MdOutlineFavoriteBorder></NavLink>
+                    <NavLink to={'/dashboard'}><RiShoppingCartLine className='p-2 border bg-white text-4xl rounded-full'></RiShoppingCartLine></NavLink>
+                    <NavLink to={'/dashboard/wishlist'}><MdOutlineFavoriteBorder className='p-2 border bg-white text-red-600 text-4xl rounded-full'></MdOutlineFavoriteBorder></NavLink>
                 </div>
             </div>
         </div>

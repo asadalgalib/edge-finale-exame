@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalf } from "react-icons/fa";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToStoreCart, addToStoreWish } from '../Utilities/addToDb';
+
 
 const Details = () => {
+    const [btnDisabled, setBtnDisabled] = useState(false);
 
     const productData = useLoaderData();
     const { id } = useParams();
     const product_id = parseInt(id);
 
     const clickedProduct = productData.find(data => product_id === data.id)
-    console.log(clickedProduct);
-    const { product_title, price, product_image, availability, description, specification, rating
+
+    const { product_title, price, product_image, availability, description, specification, rating, id: selectedId
     } = clickedProduct
+
+    const handleDisable = () => {
+        setBtnDisabled(!false)
+    }
 
     return (
         <div className=''>
-           
+
             <div className=''>
                 <div className='bg-[#9538E2] flex flex-col justify-center items-center pt-4 md:pt-8 pb-32 md:pb-56'>
                     <h1 className='text-white font-bold  text-center text-2xl md:text-3xl  md:max-w-5xl mx-auto'>Product Details</h1>
                     <p className='text-white pt-4 pb-6 text-center md:max-w-2xl max-w-96 mx-auto'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                 </div>
             </div>
-            <div className='md:h-72 h-[680px]'>
+            <div className='md:h-96 h-[680px]'>
                 <div className='md:h-64 relative flex justify-center'>
                     <div className='absolute grid md:grid-cols-2 gap-8 bg-white mt-5 border max-w-96 md:max-w-6xl mx-auto p-5 rounded-xl backdrop-blur-5xl -top-28 md:-top-60'>
                         <div className=''>
@@ -60,10 +67,10 @@ const Details = () => {
                             </div>
                             <div className='flex items-center justify-start gap-4'>
                                 <div>
-                                    <button className="flex items-center gap-2 border btn-ghost font-semibold bg-[#9538E2] rounded-3xl py-2 px-8 text-white hover:text-[#9538E2]">Add To Cart  <RiShoppingCartLine></RiShoppingCartLine></button>
+                                    <button onClick={() => { addToStoreCart(selectedId) }} className="flex items-center gap-2 border btn-ghost font-semibold bg-[#9538E2] rounded-3xl py-2 px-8 text-white hover:text-[#9538E2]">Add To Cart<RiShoppingCartLine></RiShoppingCartLine></button>
                                 </div>
-                                <div>
-                                    <button className='p-2 border-2 bg-white text-red-600 text-xl rounded-full'><MdOutlineFavoriteBorder></MdOutlineFavoriteBorder></button>
+                                <div onClick={handleDisable}>
+                                    <button onClick={() => addToStoreWish(selectedId)} disabled={btnDisabled} className='p-2 border-2 bg-white text-red-600 text-xl rounded-full'><MdOutlineFavoriteBorder></MdOutlineFavoriteBorder></button>
                                 </div>
                             </div>
                         </div>

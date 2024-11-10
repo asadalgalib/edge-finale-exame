@@ -1,8 +1,29 @@
-# React + Vite
+# Gadget Heaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live Link
 
-Currently, two official plugins are available:
+Live Link : https://http://asad09.ph-assignment-eight.surge.sh/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Requirement Document Link
+
+Link : https://drive.google.com/file/d/1U6ZJt9jvreWU1JgpHkzVOdod0dot8dAa/view?usp=drive_open
+
+### List of react fundamental concepts used in this project
+
+- Creating Fake data and use
+- React route
+- Dynamic Routing 
+- React Hooks
+- Conditional CSS using Hooks
+
+### What I have used local storage for managing Data 
+
+I used local storage to manage data. At first I checked that id I want to add to local storage. If this id already exist I will get that id otherwise I get an empty array. Then checked which id I got and which id I want to add are they same or not. I they match it will give me an alert "Product already exist", if they do not match the id will be added to the local storage.
+
+### 5 key features of this Project 
+
+- React route & Condition CSS 
+- Show Products by selected category
+- Add to Cart and Add to Wishlist
+- Show product in decending order by clicking sort button
+- Used local storage so you can Add Product to cart or wishlist with out log in
