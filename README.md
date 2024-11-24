@@ -2,11 +2,7 @@
 
 ### Live Link
 
-Live Link : asad09.ph-assignment-eight.surge.sh
-
-### Requirement Document Link
-
-Link : https://drive.google.com/file/d/1U6ZJt9jvreWU1JgpHkzVOdod0dot8dAa/view?usp=drive_open
+Live Link : https://edge.finale-exame.surge.sh
 
 ### List of react fundamental concepts used in this project
 
